@@ -1,6 +1,6 @@
 Pre-CTF Guide: You have to use `nc ip port` to connect to this server.
 
-This is a basic example of *command chaining*, in which we end the original command and give it something else.
+This is a basic example of *command chaining*, in which we end the original command and append another command to our liking.
 This concept can be used for SQL or other injections as well.
 
 ![image](https://user-images.githubusercontent.com/26480299/169344640-12758e0c-db80-457f-98a7-0665e3604219.png)
