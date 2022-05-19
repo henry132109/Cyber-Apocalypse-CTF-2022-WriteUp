@@ -9,4 +9,4 @@ Paths are also not sanitized, leading to free *directory traversal*.
 
 ![image](https://user-images.githubusercontent.com/26480299/169345122-09b8c600-3e7e-4ef4-bc04-aaa249bfaa66.png)
 
-**HTB{GTFO_4nd_m4k3_th3_b35t_4rt1f4ct5}**
+**Flag: HTB{GTFO_4nd_m4k3_th3_b35t_4rt1f4ct5}**
