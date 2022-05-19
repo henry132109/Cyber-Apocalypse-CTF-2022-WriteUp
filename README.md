@@ -1,5 +1,5 @@
 # Cyber-Apocalypse-CTF-2022-WriteUp
-This is my first time joining CTFs, I did practice a bit on THB and PicoCTF some months ago though.
+This is my first time joining CTFs, I did practice a bit on THB, PicoCTF and natas some months ago though.
 
 ![Cert](https://user-images.githubusercontent.com/26480299/169328229-1a2b2ac6-cc1a-48c3-90b3-1c11456ed715.png)
 
