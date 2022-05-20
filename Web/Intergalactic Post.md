@@ -12,7 +12,7 @@ public function subscribeUser($ip_address, $email)
 
 From the Dockerfile I know that the file name of flag is randomized. This means that I at least need RCE (`cat /flag*`) from SQL injection - which I hadn't thought possible. I had to confirm with an admin that it was indeed possible.
 
-I knew that I need a `');` to end the INSERT command, as in SQLite INSERT statements can only be followed by an upsert clause for unique fields which is not useful now. It doesn't seem like a valid character in email however. Thanks to [this post](https://dimazarno.medium.com/bypassing-email-filter-which-leads-to-sql-injection-e57bcbfc6b17) we know that quotation marks can be added to the "local-part": `"');--"@a.b`.
+I knew that I need a `');` to end the INSERT command, as in SQLite INSERT statements can only be followed by an upsert clause for unique fields which is not useful now. Unfortunately we have a PHP email filter and a semicolon doesn't seem like a valid character. Thanks to [this post](https://dimazarno.medium.com/bypassing-email-filter-which-leads-to-sql-injection-e57bcbfc6b17) we know that quotation marks can be added to the "local-part": `"');--"@a.b`.
 
 Now we have another problem: the space character `%20` cannot be used in the email. There are [alternative space characters in SQLite](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/SQL%20Injection/SQLite%20Injection.md) however. Of those characters, only `%0C` passes the PHP filter. Alternatively we can use `/**/` but it's significantly longer.
 
