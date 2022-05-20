@@ -1,3 +1,4 @@
+## Skills involved: basic cookie stealing with XSS, IDOR
 Usually when we can supply things for admin to "review", think about *XSS*. As the first (i.e. "easiest") box, simple *cookie stealing* will do.
 
 ![image](https://user-images.githubusercontent.com/26480299/169432977-26641f16-fcc8-41a2-8ddb-aa896bde1bfc.png)
