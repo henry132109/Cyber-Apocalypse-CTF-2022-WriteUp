@@ -53,9 +53,15 @@ with `doPayload('/app/routes/index.js')` we get the page source code: (image cro
 The following files should also be checked:
 - /app/package.json
 - /app/index.js
+- /app/database.js
 - /app/.env
 
-From that we know that the key supplied to package `cookie-parser`. Cookie-parser stores both the session content and the cookie signature client-side:
+From that we know that:
+- `Cookie-parser` is used.
+- the key used in cookie-parser
+- the admin name is indeed, "admin"
+
+Cookie-parser stores both the session content and the cookie signature client-side.
 
 ![image](https://user-images.githubusercontent.com/26480299/169439066-b221f8d8-56e5-4f77-88a6-25e8363ebae6.png)
 ```
@@ -63,7 +69,7 @@ From that we know that the key supplied to package `cookie-parser`. Cookie-parse
 < '{"username":"test"}'
 ```
 
-Usually cookies will store the expiry date and other details as well, but since this is a CTF, we can impersonate admin with the leaked key. I re-created the environment and created the admin session cookie.
+Usually cookies will store the expiry date, and an additional store will be used at server-side as well, but since this is a CTF, we can impersonate admin with the leaked key. I re-created the environment and created the admin session cookie.
 ```
 const express      = require('express');
 const session      = require('cookie-session');
@@ -88,7 +94,7 @@ nunjucks.configure('views', {
 app.all('*', (req, res) => {
   req.session.username = 'admin';
 
-  return res.status(404).send({
+  return res.status(200).send({
     message: 'auth success'
   });
 });
