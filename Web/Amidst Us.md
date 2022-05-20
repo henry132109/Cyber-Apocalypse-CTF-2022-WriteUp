@@ -5,6 +5,7 @@ I did not have previous experience with Flask, but this challenge is not that di
 The web application is an image color remover, taking a specified color and converting it to transparency.
 
 Only one dependency, Pillow, has the version specified (8.4.0). That is definitely [sus](https://security.snyk.io/vuln/SNYK-PYTHON-PILLOW-2331901).
+
 ![image](https://user-images.githubusercontent.com/26480299/169521629-aee84185-c1d1-4ef6-b8af-9691a1d216aa.png)
 
 We do have ImageMath.eval in the source code and we can throw in some payloads to the colors, which are used *directly without being parsed as integers*. (I used [Burp](https://portswigger.net/burp), which I learnt from "[TryHackMe](https://tryhackme.com/) Christmas" for this)
