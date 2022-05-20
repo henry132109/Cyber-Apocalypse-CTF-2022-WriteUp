@@ -1,4 +1,4 @@
-## Skills: JavaScript command RCE
+## Skills: JavaScript command injection RCE
 
 In NodeJS applications, the list of packages used is listed in `package.json`. With [Snyk](https://security.snyk.io/vuln/SNYK-JS-MDTOPDF-1657880) we can confirm a *remote code execution* (RCE) vulnerability with the `md-to-pdf` package.
 
