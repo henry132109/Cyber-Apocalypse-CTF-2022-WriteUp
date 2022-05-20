@@ -20,7 +20,7 @@ This is very bad as **important information about the source code and dependenci
 - The package convert-svg-core is used, and from [Snyk](https://security.snyk.io/vuln/SNYK-JS-CONVERTSVGCORE-1582785) we can confirm that it is susceptible to *directory traveral* attacks, which means that I could access arbitrary file on the system allowed by the program's privilege.
 - The error occurred at /app/routes/index.js.
 
-To pull off the vuln, I created a simple helper function. I increased the SVG's height to 
+To pull off the vuln, I created a simple helper function. Additionally, I increased the SVG's height to show more content as well as added a white background so that the images can be better viewed across platforms.
 ```
 let doPayload = p => fetch(`/api/export`, {
 		method: 'POST',
