@@ -1,3 +1,4 @@
+## Skills involved: basic data handling
 We have got a .csv file here. Open it up in any spreadsheet program to visualize it better (only partial data is shown).
 
 ![image](https://user-images.githubusercontent.com/26480299/169348221-e19d2894-6656-4dd3-8c02-c5b27d734c74.png)
