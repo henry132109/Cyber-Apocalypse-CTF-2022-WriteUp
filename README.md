@@ -36,4 +36,4 @@ This is my first time joining CTFs, but I did practice a bit on THB, PicoCTF and
   -  Space Pulses
 
 ## Declaration
-All the tools deployed were solely for Capture The Flag events and I have absolutely no intention to imperil the security of any machine that is not a part of the CTF challenge. The knowledge disclosed here are not to be used in any illegal activity and you are responsible for your own actions.
+All the tools deployed were solely for Capture The Flag events and I have absolutely no intention to imperil the security of any machine that is not a part of the CTF challenge. The end goal of joining CTFs is to enrich my ability as a developer. The knowledge disclosed here are not to be used in any illegal activity and you are responsible for your own actions.
