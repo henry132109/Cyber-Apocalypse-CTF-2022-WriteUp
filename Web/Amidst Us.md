@@ -1,4 +1,4 @@
-## Skill: Python command injection RCE, Context Escaping
+## Skills involved: Python command injection RCE, Context Escaping
 
 I did not have previous experience with Flask, but this challenge is not that difficult.
 
