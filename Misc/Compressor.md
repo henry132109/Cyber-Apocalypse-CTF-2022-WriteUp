@@ -1,3 +1,4 @@
+## Skills involved: command chaining
 Pre-CTF Guide: You have to use `nc ip port` to connect to this server.
 
 This is a basic example of *command chaining*, in which we end the original command and append another command to our liking.
