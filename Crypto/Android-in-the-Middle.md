@@ -6,7 +6,7 @@ Usually the number chosen must be between 2 and p-1 (inclusively). Because this 
 
 As I have practised in [PicoGym](https://play.picoctf.org/), I already had the [pycrypto](https://pypi.org/project/pycrypto/) package installed in a linux environment.
 
-My code (recreated after the event)
+My code (recreated after the event):
 ```python
 from Crypto.Cipher import AES
 from Crypto.Util.number import long_to_bytes
