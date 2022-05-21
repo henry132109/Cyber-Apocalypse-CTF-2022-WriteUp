@@ -2,7 +2,6 @@
 
 The source code is an implementation of a block cipher. As recap:
 - *A block cipher is a deterministic algorithm operating on fixed-length groups of bits, called blocks*.
-- Messages are padded to the block size and there are a number of [padding schemes](https://en.wikipedia.org/wiki/Padding_(cryptography)), with PKCS#7 used by default for the pycrypto package pad method.
 - There are various *[modes of operation](https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#CBC)* for block cipher. Except the simple and insecure ECB mode, all other modes make modification to subsequent blocks using the previous blocks to avoid encoding the same plaintext blocks into identical blocks.
 - In such modes an initialization vector is used. It is changed each time so that similar message gets encoded differently with the same key.
 
