@@ -21,14 +21,14 @@ DEADBEEFDEADBEEFDEADBEEFDEADBEEF 10101010101010101010101010101010  // a new bloc
 DEADBEEFDEADBEEFDEADBEEFDEADBEEF 990f0f0f0f0f0f0f0f0f0f0f0f0f0f0f
 ```
 
-By pushing 1 letter into a new chunk, we can get that letter by bruteforcing all the possible letters (I used Python's `string.ascii_letters+string.digits+string.punctuation`).
+By pushing only 1 letter into a new chunk, we can get that letter by bruteforcing all the possible letters (I used Python's `string.ascii_letters+string.digits+string.punctuation`).
 Then we can push 1 more letter into the new chunk while using the previous value. This can be continued until the whole flag is recovered.
 
 We now need to find the block boundary - and when our input is 11 bytes (22 hex symbols), a new chunk was created (the ciphertext got longer).
 
 With the knowledge that 16-12=4 bytes is needed to fill the first chunk, we can write this code:
 
-```
+```python
 import nclib, string, time
 nc = nclib.Netcat(( '159.65.89.199', 32234 ))
 nc.recv_until('> ')
@@ -58,3 +58,5 @@ if response[32:64] == response[-3-32:-3]:
 else:
   print("Sanity check failed")
 ```
+
+**Flag: HTB{345y_53cr37_r3c0v3ry}**
